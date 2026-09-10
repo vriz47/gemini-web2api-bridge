@@ -56,3 +56,16 @@ Catatan:
 - Session login Google sekarang = skema konsolidasi 9 cookie
   (`__Secure-1PSID`, `SAPISID`, `NID`, dsb.; `SID`/`HSID`/`APISID` memang tidak ada lagi).
 - `capture_cookies.py --serve` hanya mendengarkan di `127.0.0.1`.
+
+## Credits
+
+Proyek ini berdasar / memakai pola dari:
+
+- [X-shuffle/gemini-web2api](https://github.com/X-shuffle/gemini-web2api) (MIT) — basis
+  `gemini_web2api.py` (proxy chat + StreamGenerate).
+- [ZmoleCristian/gemini-web-image](https://github.com/ZmoleCristian/gemini-web-image) —
+  struktur payload StreamGenerate dengan binding file (inner array + model id image).
+- [HanaokaYuzu/Gemini-API](https://github.com/HanaokaYuzu/Gemini-API) — protokol upload
+  Scotty ke `content-push.googleapis.com` + ekstraksi page token (`qKIAYe`, `pctx`).
+
+Perincian hak cipta ada di `LICENSE` (MIT). Terima kasih kepada para penulis di atas.

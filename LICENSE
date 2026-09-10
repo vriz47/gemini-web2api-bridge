@@ -2,6 +2,8 @@ MIT License
 
 Copyright (c) 2026 X-shuffle (original gemini-web2api)
 Copyright (c) 2026 vriz47 (Termux modifications: cookie auth, XSRF self-heal, vision support)
+Copyright (c) 2026 ZmoleCristian (gemini-web-image, reference for image stream payload)
+Copyright (c) 2026 HanaokaYuzu (Gemini-API, reference for Scotty upload protocol)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
