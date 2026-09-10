@@ -38,5 +38,21 @@ Model   : gemini-3.5-flash, gemini-3.5-flash-thinking, gemini-3.1-pro, ...
 
 ## Capture cookie otomatis
 
-`capture_cookies.py --serve` membuka listener 127.0.0.1:8899 untuk menerima cookie dari
-extension browser (baca `chrome.cookies`, termasuk HttpOnly) dan menulis `config/cookies.txt`.
+Cookie login `gemini.google.com` (termasuk yang HttpOnly) diambil dari **Kiwi Browser NEXT**
+(membutuhkan extension, karena CDP/remote-debugging sudah hilang di Chromium modern).
+
+1. Jalankan listener di Termux:
+   ```bash
+   python3 capture_cookies.py --serve   # listener 127.0.0.1:8899
+   ```
+2. Buka `kiwi://extensions` di Kiwi NEXT → aktifkan Developer mode → Load unpacked
+   → pilih folder `kiwi-cookie-ext/` (atau zip jadi `kiwi-cookie-ext.zip` lalu Load zip).
+3. Login ke `gemini.google.com` di Kiwi. Extension membaca `chrome.cookies` (baca
+   HttpOnly) dan mengirim ke listener setiap ~2 detik; cookie ditulis ke
+   `config/cookies.txt` dalam satu baris.
+
+Catatan:
+- MV2 sudah mati — butuh Kiwi NEXT (MV3), bukan Kiwi classic/playstore.
+- Session login Google sekarang = skema konsolidasi 9 cookie
+  (`__Secure-1PSID`, `SAPISID`, `NID`, dsb.; `SID`/`HSID`/`APISID` memang tidak ada lagi).
+- `capture_cookies.py --serve` hanya mendengarkan di `127.0.0.1`.
