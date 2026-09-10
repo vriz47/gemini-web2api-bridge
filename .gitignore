@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+config/config.json
+config/cookies.txt
+config/xsrf.txt
+*.log

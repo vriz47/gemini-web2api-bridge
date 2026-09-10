@@ -1,0 +1,11 @@
+{
+  "host": "127.0.0.1",
+  "port": 8787,
+  "retry_attempts": 3,
+  "retry_delay_sec": 2,
+  "request_timeout_sec": 180,
+  "cookie_file": "./config/cookies.txt",
+  "xsrf_file": "./config/xsrf.txt",
+  "default_model": "gemini-3.5-flash",
+  "log_requests": true
+}
